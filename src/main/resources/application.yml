@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: PP2_3_1_2_SPRING_BOOT
+  datasource:
+    url: jdbc:mysql://localhost:3306/carowners?verifyServerCertificate=false&useSSL=false&requireSSL=false&useLegacyDatetimeCode=false&amp&serverTimezone=UTC
+    username: root
+    password: uGV!hu3.24sdf
+    driverClassName: com.mysql.cj.jdbc.Driver
+server:
+  port: 8085
