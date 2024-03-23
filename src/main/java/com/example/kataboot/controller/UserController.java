@@ -22,9 +22,7 @@ public class UserController {
 
     @GetMapping(value = "/")
     public String printWelcome(ModelMap model) {
-        List<User> users = userService.getAllUsers();
-
-        model.addAttribute("users", users);
+        model.addAttribute("users", userService.getAllUsers());
         return "index";
     }
 
@@ -36,8 +34,7 @@ public class UserController {
 
     @GetMapping(value = "/update")
     public String update(ModelMap modelMap, Long id) {
-        User user = userService.getUserByID(id);
-        modelMap.addAttribute("user", user);
+        modelMap.addAttribute("user", userService.getUserByID(id));
         return "update";
     }
 
@@ -49,8 +46,7 @@ public class UserController {
 
     @GetMapping(value = "/add")
     public String create(ModelMap modelMap) {
-        User user = new User();
-        modelMap.addAttribute("user", user);
+        modelMap.addAttribute("user", new User());
         return "add";
     }
 
